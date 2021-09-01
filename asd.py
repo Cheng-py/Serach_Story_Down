@@ -407,30 +407,178 @@ import pinyin
 #     print("大于")
 
 
-import MySQLdb
-db = MySQLdb.connect("localhost","root","123456","spiders",charset = 'utf8')
-cursor = db.cursor()
-tableName = 'zx'
-sql = "select title from zx where id=10"  # 计算多少条数据
-sql2 = "select link from zx"  # 计算多少条数据
-s3 = "select id from zx;"
+# import MySQLdb
+# db = MySQLdb.connect("localhost","root","123456","spiders",charset = 'utf8')
+# cursor = db.cursor()
+# tableName = 'zx'
+#
+# sql_id = "select id from "+tableName
+# cursor.execute(sql_id)
+# id = cursor.fetchone()
+# id = id[0]
+# print(id)
+# # print(id[0])
+# # print(type(id[0]))
+# print(type(id))
 
 
-cursor.execute(s3)
-rs = cursor.fetchone()
+# sql = "select title from zx where id=10"  # 计算多少条数据
+# sql2 = "select link from zx"  # 计算多少条数据
+# s3 = "select id from zx;"
+#
 
-print(str(rs[0]))
+# cursor.execute(s3)
+# rs = cursor.fetchone()
+#
+# print(str(rs[0]))
+#
+# cursor.execute(sql)
+# res = cursor.fetchone()
+# cursor.execute(sql2)
+#
+# res2 = cursor.fetchone()
+# res = str(res[0])
+# print(res)
+# print(res2)
+# print(type(res))
+# version1 = "1.0.1"
+# version2 = "1"
+# version1 = "7.5.3"
+# version2 = "7.5.3"
 
-cursor.execute(sql)
-res = cursor.fetchone()
-cursor.execute(sql2)
+# version1 = "1.0001"
+# version2 = "1.01"
+# class Solution(object):
+#     def compareVersion(self, version1, version2):
+#         """
+#         :type version1: str
+#         :type version2: str
+#         :rtype: int
+#         """
+#         str1 = ''
+#         str2 = ''
+#         version1 = version1.split('.')
+#         version2 = version2.split('.')
+#         for i in range(len(version1)):
+#             str1+=version1[i]
+#         for j in range(len(version2)):
+#             str2+=version2[j]
+#         len1 = len(str1)
+#         len2 = len(str2)
+#
+#         if(len1>len2):
+#             str2 = int(str2)
+#             res = len1-len2
+#             for _ in range(res):
+#                 str2*=10
+#
+#         elif(len2>len1):
+#             str1 = int(str1)
+#             res = len2-len1
+#             for _ in range(res):
+#                 str1*=10
+#
+#         else:
+#             str1 = int(str1)
+#             str2 = int(str2)
+#
+#         if(int(str1)>int(str2)):
+#             return 1
+#         elif(int(str1)<int(str2)):
+#             return -1
+#         else:
+#             return 0
+#
+# sl = Solution()
+# sl.compareVersion(version1,version2)
+# res = sl.compareVersion(version1,version2)
+# print(res)
 
-res2 = cursor.fetchone()
-res = str(res[0])
-print(res)
-print(res2)
-print(type(res))
+# a = '123'
+# b = '12345'
+# la  = len(a)
+# lb = len(b)
+# print(la)
+# if(len(b)>len(a)):
+#     res = lb - la
+#     print(res)
+#     a = int(a)
+#     for _ in range(res):
+#         print("我循环了")
+#         a*=10
+#         print(la)
+#     a = str(a)
+# print(a)
+# def test(n):
+#
+#     while True:
+#         n -= 1
+#         print("大于")
+#         if(n<5):
+#             return 0
+# test(7)
+# b = 'abc'
+# c= 'qwer'
+# a = """
+#             truncate table %s;
+#             drop table %s;
+#         """ % (b,c)
+# print(a)
+import shutil
+import os
+# print(type(len(os.listdir(os.getcwd()+"\\"+"六脉文圣"))))
+# if os.path.exists(os.getcwd()):
+#     print("Y")
+# print(os.getcwd())
+# path =os.getcwd()+"\\"+"六脉文圣"
+# shutil.rmtree(path)
+# path = os.getcwd()+"\\"+"赘婿"
+# print(os.walk(path))
+# id = ""
+# for i,j,k in os.walk(path):
+#     print(i)
+#     print(j)
+#     print(k)
+#     id = k[0]
+# print(id)
+# print(id[0])
+# print(os.path.basename(path))
 
 
+# a= "1啦啦"
+# b = '12啦啦啦'
+# c = "12345啦啦啦"
+# a = a[:2]
+# b  = b[:2]
+# if not (a.isnumeric()):
+#     a = a[0]
+#     a = int(a)
+# print(a)
+# print(type(a))
+# print(b.isnumeric())
+# print(type(b))
 
+# def book_id(str):
+#     while True:
+#         if(str[:5].isnumeric()):
+#             return int(str[:5])
+#
+#         elif (str[:4].isnumeric()):
+#             return int(str[:4])
+#
+#         elif (str[:3].isnumeric()):
+#             return int(str[:3])
+#
+#         elif (str[:2].isnumeric()):
+#             return int(str[:2])
+#
+#         elif (str[:1].isnumeric()):
+#             return int(str[:1])
+#
+# a = "123kajldjadklad"
+# print(is_(a))
 
+path = 'D:\Python\Python\Play\闲得无聊就爬爬\Serach_Story_Down\赘婿'
+# for i,j,k in os.walk(path):
+#     print(k[0])
+print(len(os.listdir(path)))
